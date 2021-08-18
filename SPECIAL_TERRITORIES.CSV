@@ -1,0 +1,22 @@
+"country_code","country_name","country_border_code","country_border_name"
+"AB","Abkhazia","GE","Georgia"
+"AB","Abkhazia","RU","Russian Federation"
+"AL","Albania","KS","Kosovo"
+"GE","Georgia","AB","Abkhazia"
+"GE","Georgia","SU","South Ossetia"
+"KS","Kosovo","AL","Albania"
+"KS","Kosovo","ME","Montenegro"
+"KS","Kosovo","MK","North Macedonia"
+"KS","Kosovo","RS","Serbia"
+"ME","Montenegro","KS","Kosovo"
+"MK","North Macedonia","KS","Kosovo"
+"PD","Principality of Sealand","",""
+"RS","Serbia","KS","Kosovo"
+"RU","Russian Federation","AB","Abkhazia"
+"RU","Russian Federation","SU","South Ossetia"
+"SU","South Ossetia","GE","Georgia"
+"SU","South Ossetia","RU","Russian Federation"
+
+
+
+
