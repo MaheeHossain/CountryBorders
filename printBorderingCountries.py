@@ -2,7 +2,7 @@ import csv
 import sys
 
 BORDER_FILE = './Borders_database/GEODATASOURCE-COUNTRY-BORDERS.CSV'
-INPUT_FILE = 'Input.txt'
+INPUT_FILE = './Test_cases/Input.txt'
 MAX_LINES = 2000
 COUNTRY_ONE = 1
 COUNTRY_TWO = 3
@@ -28,13 +28,18 @@ def removeNewLine(string):
         return string[:-1]
     return string
 
-def borders(country):
-    # prints the list of countries that border it
-    borderList = []
+def borderOfBorders(country_list):
+    secondRankBorders = []
+    for country in country_list:
+        return 0
 
+def borders(country):
+    # Returns the list of countries that border it, and if country exists
+    borderList = []
+    line_count = 0
+    # Open the border database, check every line to find the correct countries
     with open(BORDER_FILE) as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
-        line_count = 0
         for row in csv_reader:
             if (line_count > MAX_LINES):
                 # Some more lines than there should be
@@ -44,9 +49,21 @@ def borders(country):
                 if (row[COUNTRY_TWO] != ""):
                     borderList.append(row[COUNTRY_TWO])
                 line_count += 1
-        if (line_count == 0):
-            return country + " not present in database"
+    #     if (line_count == 0):
+    #         return country + " not present in database"
 
+    # if (len(borderList) == 0):
+    #     return country + " borders no countries"
+    # elif (len(borderList) == 1):
+    #     return country + " borders this country: " + stringifyList(borderList)
+    # return country + " borders these countries: " + stringifyList(borderList)
+    return(borderList, line_count)
+
+def bordersOutput(country):
+    # Returns the borders with the required strings
+    borderList, line_count = borders(country)
+    if (line_count == 0):
+        return country + " not present in database"
     if (len(borderList) == 0):
         return country + " borders no countries"
     elif (len(borderList) == 1):
@@ -58,7 +75,7 @@ if __name__ == '__main__':
 
     countries = readInput()
     for country in countries:
-        result = borders(removeNewLine(country))
+        result = bordersOutput(removeNewLine(country))
         fptr.write(result + '\n')
 
     fptr.close()
