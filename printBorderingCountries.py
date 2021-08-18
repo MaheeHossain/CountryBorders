@@ -1,7 +1,8 @@
 import csv
 import sys
 
-BORDER_FILE = 'GEODATASOURCE-COUNTRY-BORDERS.CSV'
+BORDER_FILE = './Borders_database/GEODATASOURCE-COUNTRY-BORDERS.CSV'
+INPUT_FILE = 'Input.txt'
 MAX_LINES = 2000
 COUNTRY_ONE = 1
 COUNTRY_TWO = 3
@@ -13,6 +14,13 @@ def stringifyList(list):
         string += item + ", "
 
     return string[:-2]
+
+def readInput():
+    # Reads the input file and returns an array with all countries
+    lines=[]
+    with open(INPUT_FILE) as f:
+        lines = f.readlines()
+    return lines
 
 def borders(country):
     # prints the list of countries that border it
@@ -40,8 +48,10 @@ def borders(country):
 if __name__ == '__main__':
     fptr = sys.stdout
 
-    country = input().strip()
-    result = borders(country)
-    fptr.write(result + '\n')
+    # country = input().strip()
+    countries = readInput()
+    for country in countries:
+        result = borders(country[:-1])
+        fptr.write(result + '\n')
 
     fptr.close()
