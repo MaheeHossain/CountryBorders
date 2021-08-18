@@ -22,6 +22,12 @@ def readInput():
         lines = f.readlines()
     return lines
 
+def removeNewLine(string):
+    # If string has new line at the end, remove it
+    if (string[-1] == '\n'):
+        return string[:-1]
+    return string
+
 def borders(country):
     # prints the list of countries that border it
     borderList = []
@@ -38,6 +44,8 @@ def borders(country):
                 if (row[COUNTRY_TWO] != ""):
                     borderList.append(row[COUNTRY_TWO])
                 line_count += 1
+        if (line_count == 0):
+            return country + " not present in database"
 
     if (len(borderList) == 0):
         return country + " borders no countries"
@@ -48,10 +56,9 @@ def borders(country):
 if __name__ == '__main__':
     fptr = sys.stdout
 
-    # country = input().strip()
     countries = readInput()
     for country in countries:
-        result = borders(country[:-1])
+        result = borders(removeNewLine(country))
         fptr.write(result + '\n')
 
     fptr.close()
