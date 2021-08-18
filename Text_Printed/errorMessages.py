@@ -1,1 +1,2 @@
-TOO_MUCH_DATA = "Too much data in file - error"
+TOO_MUCH_DATA = "Error - Too many countries appear to be bordering this country on the database. Might be an error with country inputted. \n"
+BORDERING_COUNTRY_NO_DATA = "Error - Country which borders country A cannot be found on database. Database probably missing information. \n"
