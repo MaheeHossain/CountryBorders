@@ -12,6 +12,7 @@ from utils import removeNewLine
 from borderingCountries import bordersOutput
 from ordinalBorderingCountries import ordinalBordersOutput
 from readFiles import readInput
+from databaseFunctions import altNames
 from Text_Printed.errorMessages import ORDINAL_AMOUNT_TOO_LOW, ORDINANCE_ZERO
 from Text_Printed.bordersOutput import NOT_IN_DATABASE_ORDINAL
 
@@ -26,7 +27,7 @@ if __name__ == '__main__':
     if (ordinalValue > 0):
         for country in countries[1:]:
             # Removes newline from input
-            country = removeNewLine(country)
+            country = altNames(removeNewLine(country))
             result = bordersOutput(country)
             fptr.write('\n' + result + '\n')
 
