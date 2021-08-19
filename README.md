@@ -27,9 +27,13 @@ Level of Ordinance == 3 -> Countries which border ordinance 2 countries
 If input file is:
 
 2
+
 Australia
+
 Bangladesh
+
 Pakistan
+
 Victoria
 
 The result will be: 
@@ -51,5 +55,5 @@ Pakistan's secondary border nations are: Tajikistan, Turkmenistan, Uzbekistan, B
 
 Victoria not present in database
 
-# How to use do they border
+# How to use 'do they border'
 Run doTheyBorder.py, and enter two countries, seperated by a comma. Results will appear in the terminal, and they will tell you if the countries border, are seperated by 1 country, or are not either
