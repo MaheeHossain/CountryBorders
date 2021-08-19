@@ -6,7 +6,7 @@ from utils import stringifyList
 from borderingCountries import borders
 
 from Text_Printed.errorMessages import BORDERING_COUNTRY_NO_DATA
-from Text_Printed.bordersOutput import NOT_IN_DATABASE_ORDINAL, NO_ORDINAL_BORDERS, ONE_ORDINAL_BORDERS, MULTIPLE_ORDINAL_BORDERS
+from Text_Printed.bordersOutput import NOT_IN_DATABASE_ORDINAL, NO_ORDINAL_BORDERS, ONE_ORDINAL_BORDERS, MULTIPLE_ORDINAL_BORDERS, NO_TERTIARY_BORDERS, ONE_TERTIARY_BORDERS, MULTIPLE_TERTIARY_BORDERS
 
 EXISTS_FLAG       = True
 DOESNT_EXIST_FLAG = False
@@ -50,17 +50,31 @@ def ordinalBordersOutput(country, ordinalValue):
     borderList, line_count = borders(country)
     ordinalBorderList, existance = borderOfBorders([country], line_count, borderList)
 
+    # Temporary fix for tertiary
+    if (ordinalValue == 3):
+        tertiaryBorderList, existance = borderOfBorders(
+            [country]+borderList, line_count, ordinalBorderList)
+
     # If country wasn't found in the database
     if (not existance):
         return NOT_IN_DATABASE_ORDINAL
     
     # If country was in database, but has no ordinal borders
     if (len(ordinalBorderList) == 0):
-        return country + NO_ORDINAL_BORDERS
+        if (ordinalValue == 2):
+            return country + NO_ORDINAL_BORDERS
+        else: 
+            return country + NO_TERTIARY_BORDERS + stringifyList(tertiaryBorderList)
     
     # If country was in database, and has one ordinal border
     elif (len(ordinalBorderList) == 1):
-        return country + ONE_ORDINAL_BORDERS + stringifyList(ordinalBorderList)
+        if (ordinalValue == 2):
+            return country + ONE_ORDINAL_BORDERS + stringifyList(ordinalBorderList)
+        else:
+            return country + ONE_TERTIARY_BORDERS + stringifyList(tertiaryBorderList)
     
     # If country was in database, and has multiple ordinal borders
-    return country + MULTIPLE_ORDINAL_BORDERS + stringifyList(ordinalBorderList)
+    if (ordinalValue == 2):
+        return country + MULTIPLE_ORDINAL_BORDERS + stringifyList(ordinalBorderList)
+    else: 
+        return country + MULTIPLE_TERTIARY_BORDERS + stringifyList(tertiaryBorderList)

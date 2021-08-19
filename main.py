@@ -44,8 +44,9 @@ if __name__ == '__main__':
                     if (ordinalResult == NOT_IN_DATABASE_ORDINAL):
                         fptr.write('\n')
                     else:
-                        fptr.write(ordinalResult + '\n' + '\n')
+                        fptr.write(ordinalResult + '\n')
                     i += 1
+                fptr.write('\n')
 
     # If ordinance value is 0, return the country itself
     elif (ordinalValue == 0):

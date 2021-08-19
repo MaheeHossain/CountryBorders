@@ -8,6 +8,6 @@ ALT_NAMES = './Test_cases/alternativeNames.txt'
 def readInput():
     # Reads the input file and returns an array with all countries
     lines=[]
-    with open(INPUT_FILE) as f:
+    with open(DEMO_FILE) as f:
         lines = f.readlines()
     return lines

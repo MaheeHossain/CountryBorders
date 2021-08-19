@@ -1,20 +1,8 @@
-Australia borders no countries
-Australia doesn't have any secondary borders
+Brazil borders these countries: Argentina, Bolivia (Plurinational State Of), Colombia, French Guiana, Guyana, Paraguay, Peru, Suriname, Uruguay, Venezuela (Bolivarian Republic of)
+Brazil's secondary border nations are: Chile, Ecuador, Panama
+Brazil's tertiary border nations are: Costa Rica
 
-Pakistan borders these countries: Afghanistan, China, India, Iran (Islamic Republic of)
-Pakistan's secondary border nations are: Tajikistan, Turkmenistan, Uzbekistan, Bhutan, Hong Kong, Kazakhstan, Korea (Democratic People's Republic of), Kyrgyzstan, Lao People's Democratic Republic, Macao, Mongolia, Myanmar, Nepal, Russian Federation, Viet Nam, Bangladesh, Armenia, Azerbaijan, Iraq, Turkey
-
-Victoria not present in database
-
-Canada borders this country: United States of America
-Canada's secondary border nation is: Mexico
-
-Germany borders these countries: Austria, Belgium, Czechia, Denmark, France, Luxembourg, Netherlands, Poland, Switzerland
-Germany's secondary border nations are: Hungary, Italy, Liechtenstein, Slovakia, Slovenia, Andorra, Monaco, Spain, Belarus, Lithuania, Russian Federation, Ukraine
-
-Morocco borders these countries: Algeria, Spain, Western Sahara
-Morocco's secondary border nations are: Libya, Mali, Mauritania, Niger, Tunisia, Andorra, France, Gibraltar, Portugal
-
-Austria borders these countries: Czechia, Germany, Hungary, Italy, Liechtenstein, Slovakia, Slovenia, Switzerland
-Austria's secondary border nations are: Poland, Belgium, Denmark, France, Luxembourg, Netherlands, Croatia, Romania, Serbia, Ukraine, San Marino, Holy See
+Costa Rica borders these countries: Nicaragua, Panama
+Costa Rica's secondary border nations are: Honduras, Colombia
+Costa Rica's tertiary border nations are: El Salvador, Guatemala, Brazil, Ecuador, Peru, Venezuela (Bolivarian Republic of)
 
