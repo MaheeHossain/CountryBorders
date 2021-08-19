@@ -38,11 +38,14 @@ if __name__ == '__main__':
             # If ordinance is above one, return borders of borders, to the 
             # degree specified by the ordinance value
             if (ordinalValue > 1):
-                ordinalResult = ordinalBordersOutput(country)
-                if (ordinalResult == NOT_IN_DATABASE_ORDINAL):
-                    fptr.write('\n')
-                else:
-                    fptr.write(ordinalResult + '\n' + '\n')
+                i = 2
+                while (i <= ordinalValue):
+                    ordinalResult = ordinalBordersOutput(country, i)
+                    if (ordinalResult == NOT_IN_DATABASE_ORDINAL):
+                        fptr.write('\n')
+                    else:
+                        fptr.write(ordinalResult + '\n' + '\n')
+                    i += 1
 
     # If ordinance value is 0, return the country itself
     elif (ordinalValue == 0):
