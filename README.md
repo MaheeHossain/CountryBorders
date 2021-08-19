@@ -1,5 +1,5 @@
 # CountryBorders
-List of all countries that border a country
+List of all countries that border a country, and all the countries which border those countries
 
 Input a country, and the list of countries that borders it is returned
 
