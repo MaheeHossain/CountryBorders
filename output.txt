@@ -15,3 +15,6 @@ Germany's secondary border nations are: Hungary, Italy, Liechtenstein, Slovakia,
 Morocco borders these countries: Algeria, Spain, Western Sahara
 Morocco's secondary border nations are: Libya, Mali, Mauritania, Niger, Tunisia, Andorra, France, Gibraltar, Portugal
 
+Austria borders these countries: Czechia, Germany, Hungary, Italy, Liechtenstein, Slovakia, Slovenia, Switzerland
+Austria's secondary border nations are: Poland, Belgium, Denmark, France, Luxembourg, Netherlands, Croatia, Romania, Serbia, Ukraine, San Marino, Holy See
+

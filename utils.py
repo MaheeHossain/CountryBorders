@@ -14,3 +14,10 @@ def removeNewLine(string):
     if (string[-1] == '\n'):
         return string[:-1]
     return string
+
+def removeSpaces(string):
+    # Remove any spaces from start and back
+    return string.strip()
+
+def removeUnwantedChars(string):
+    return removeSpaces(removeNewLine(string))

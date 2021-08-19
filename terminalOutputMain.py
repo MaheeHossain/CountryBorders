@@ -8,7 +8,7 @@
 
 import sys
 
-from utils import removeNewLine
+from utils import removeUnwantedChars
 from borderingCountries import bordersOutput
 from ordinalBorderingCountries import ordinalBordersOutput
 from readFiles import readInput
@@ -27,7 +27,7 @@ if __name__ == '__main__':
     if (ordinalValue > 0):
         for country in countries[1:]:
             # Removes newline from input
-            country = altNames(removeNewLine(country))
+            country = altNames(removeUnwantedChars(country))
             result = bordersOutput(country)
             fptr.write('\n' + result + '\n')
 
@@ -44,7 +44,7 @@ if __name__ == '__main__':
     elif (ordinalValue == 0):
         print(ORDINANCE_ZERO)
         for country in countries[1:]:
-            fptr.write(removeNewLine(country) + " is " + removeNewLine(country) + "\n")
+            fptr.write(removeUnwantedChars(country) + " is " + removeUnwantedChars(country) + "\n")
     
     # Ordinance is not a positive number - impossible
     else:
