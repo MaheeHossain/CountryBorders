@@ -1,15 +1,19 @@
 # CountryBorders
-List of all countries that border a country, and all the countries which border those countries
+There are two functionalities of the program:
 
+1. List of all countries that border a country, and all the countries which border those countries.
 Input a country, and the list of countries that borders it is returned
+
+2. Input two countries into the terminal. The program will tell you if they border, or are seperated by one country. 
 
 This site or product includes Country Borders data available from https://www.geodatasource.com.
 
-# How to use program
+# How to use main program
 County database(s) are in the border_database folder. Input is in the test_cases folder. 
-If you want to test your own countries, for now you have to either edit input.txt, or create a new text file with the countries you want, and then edit INPUT_FILES in Test_cases to be the file you want. Results will appear in terminal. 
+If you want to test your own countries, for now you have to either edit input.txt, or create a new text file with the countries you want, and then edit INPUT_FILES in Test_cases to be the file you want.
+Results will appear in terminal if using terminalOutputMain, and will appear in output.txt if using main. 
 
-# How to structure input file
+# How to structure input file for main or terminalOutputMain
 In the input file, enter the level of ordinance, and the list of countries you want to check. 
 Level of ordinance is the degrees of seperation you want between your country and the furthest input
 
