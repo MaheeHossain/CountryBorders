@@ -43,7 +43,7 @@ def borderOfBorders(originalCountries, lines, country_list):
 
     return ordinalRankBorders, EXISTS_FLAG
 
-def ordinalBordersOutput(country):
+def ordinalBordersOutput(country, ordinalValue):
     # Returns the secondary borders with the required strings
 
     # Get list of ordinal borders, and if the country is in the database
