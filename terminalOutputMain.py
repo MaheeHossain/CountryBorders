@@ -15,12 +15,8 @@ from readFiles import readInput
 from Text_Printed.errorMessages import ORDINAL_AMOUNT_TOO_LOW, ORDINANCE_ZERO
 from Text_Printed.bordersOutput import NOT_IN_DATABASE_ORDINAL
 
-OUTPUT_FILE = "output.txt"
-
 if __name__ == '__main__':
-    original_stdout = sys.stdout
-    fptr = open(OUTPUT_FILE, 'w')
-    sys.stdout = fptr
+    fptr = sys.stdout
 
     # Get list of countries and level of ordinance
     countries = readInput()
@@ -32,16 +28,16 @@ if __name__ == '__main__':
             # Removes newline from input
             country = removeNewLine(country)
             result = bordersOutput(country)
-            fptr.write(result + '\n')
+            fptr.write('\n' + result + '\n')
 
             # If ordinance is above one, return borders of borders, to the 
             # degree specified by the ordinance value
             if (ordinalValue > 1):
                 ordinalResult = ordinalBordersOutput(country)
                 if (ordinalResult == NOT_IN_DATABASE_ORDINAL):
-                    fptr.write('\n')
+                    fptr.write("")
                 else:
-                    fptr.write(ordinalResult + '\n' + '\n')
+                    fptr.write(ordinalResult + '\n')
 
     # If ordinance value is 0, return the country itself
     elif (ordinalValue == 0):
@@ -52,6 +48,6 @@ if __name__ == '__main__':
     # Ordinance is not a positive number - impossible
     else:
         print(ORDINAL_AMOUNT_TOO_LOW)
-    
-    sys.stdout = original_stdout
+
+    fptr.write('\n')
     fptr.close()
