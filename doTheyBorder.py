@@ -22,9 +22,15 @@ if __name__ == '__main__':
     # Get out the borderlist and ordinal border lists
     borderList, match_count = borders(countries[0])
     ordinalBorderList, exists = borderOfBorders([countries[0]], match_count, borderList)
+
+    # If second country borders the first country
     if (countries[1] in borderList):
         print(BORDER_EACH_OTHER.format(c1 = countries[0], c2 = countries[1]))
+    
+    # If second country is seperated by one
     elif (countries[1] in ordinalBorderList):
         print(SECONDARY_BORDER_EACH_OTHER.format(c1 = countries[0], c2 = countries[1]))
+    
+    # If second country is two or more degrees of seperation away, or can never border
     else:
         print(DO_NOT_BORDER_EACH_OTHER.format(c1 = countries[0], c2 = countries[1]))
