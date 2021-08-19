@@ -31,12 +31,18 @@ Victoria
 The result will be: 
 
 Australia borders no countries
+
 Australia doesn't have any secondary borders
 
+
 Bangladesh borders these countries: India, Myanmar
-Bangladesh's secondary border nations are: Bhutan, China, Myanmar, Nepal, Pakistan, India, Lao People's Democratic Republic, Thailand
+
+Bangladesh's secondary border nations are: Bhutan, China, Nepal, Pakistan, Lao People's Democratic Republic, Thailand
+
 
 Pakistan borders these countries: Afghanistan, China, India, Iran (Islamic Republic of)
+
 Pakistan's secondary border nations are: Tajikistan, Turkmenistan, Uzbekistan, Bhutan, Hong Kong, Kazakhstan, Korea (Democratic People's Republic of), Kyrgyzstan, Lao People's Democratic Republic, Macao, Mongolia, Myanmar, Nepal, Russian Federation, Viet Nam, Bangladesh, Armenia, Azerbaijan, Iraq, Turkey
+
 
 Victoria not present in database
