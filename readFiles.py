@@ -1,3 +1,6 @@
+# Code written by Mahee Hossain: https://github.com/MaheeHossain
+# Functions to help deal with files
+
 INPUT_FILE = './Test_cases/Input.txt'
 
 def readInput():

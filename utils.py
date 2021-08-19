@@ -1,3 +1,6 @@
+# Code written by Mahee Hossain: https://github.com/MaheeHossain
+# Utility functions for the program
+
 def stringifyList(list):
     string = ""
     

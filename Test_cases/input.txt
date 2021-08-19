@@ -3,3 +3,5 @@ Australia
 Bangladesh
 Pakistan
 Victoria
+Canada
+Germany
