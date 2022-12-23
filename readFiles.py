@@ -1,13 +1,9 @@
 # Code written by Mahee Hossain: https://github.com/MaheeHossain
 # Functions to help deal with files
 
-INPUT_FILE = './Test_cases/Input.txt'
-DEMO_FILE = './Test_cases/Demo.txt'
-ALT_NAMES = './Test_cases/alternativeNames.txt'
-
-def readInput():
+def readInput(file):
     # Reads the input file and returns an array with all countries
     lines=[]
-    with open(DEMO_FILE) as f:
+    with open(file) as f:
         lines = f.readlines()
     return lines

@@ -23,6 +23,11 @@ Level of Ordinance == 2 -> Countries which border ordinance 1 countries
 
 Level of Ordinance == 3 -> Countries which border ordinance 2 countries
 
+# How to run with specific input file
+In line 31 of main.py, enter the location of the input file
+Run the code through the following line:
+py -u "{location}\CountryBorders\main.py"
+
 # Example
 If input file is:
 

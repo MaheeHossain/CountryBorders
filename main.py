@@ -16,6 +16,10 @@ from databaseFunctions import altNames
 from Text_Printed.errorMessages import ORDINAL_AMOUNT_TOO_LOW, ORDINANCE_ZERO
 from Text_Printed.bordersOutput import NOT_IN_DATABASE_ORDINAL
 
+INPUT_FILE = './Test_cases/Input.txt'
+DEMO_FILE = './Test_cases/Demo.txt'
+ALT_NAMES = './Test_cases/alternativeNames.txt'
+
 OUTPUT_FILE = "output.txt"
 
 if __name__ == '__main__':
@@ -24,7 +28,7 @@ if __name__ == '__main__':
     sys.stdout = fptr
 
     # Get list of countries and level of ordinance
-    countries = readInput()
+    countries = readInput(DEMO_FILE)
     ordinalValue = int(countries[0])
 
     # If ordinance is a positive number, return borders
